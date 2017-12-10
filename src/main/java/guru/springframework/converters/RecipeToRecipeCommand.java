@@ -58,4 +58,18 @@ public class RecipeToRecipeCommand implements Converter<Recipe, RecipeCommand>{
 
         return command;
     }
+
+	public CategoryToCategoryCommand getCategoryConveter() {
+		return categoryConveter;
+	}
+
+	public IngredientToIngredientCommand getIngredientConverter() {
+		return ingredientConverter;
+	}
+
+	public NotesToNotesCommand getNotesConverter() {
+		return notesConverter;
+	}
+    
+    
 }

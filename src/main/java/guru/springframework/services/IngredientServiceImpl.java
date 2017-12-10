@@ -9,6 +9,8 @@ import guru.springframework.repositories.RecipeRepository;
 import guru.springframework.repositories.reactive.RecipeReactiveRepository;
 import guru.springframework.repositories.reactive.UnitOfMeasureReactiveRepository;
 import lombok.extern.slf4j.Slf4j;
+
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
@@ -21,6 +23,7 @@ import java.util.Optional;
 @Service
 public class IngredientServiceImpl implements IngredientService {
 
+	final static Logger log = Logger.getLogger(IngredientServiceImpl.class);
     private final IngredientToIngredientCommand ingredientToIngredientCommand;
     private final IngredientCommandToIngredient ingredientCommandToIngredient;
     private final RecipeReactiveRepository recipeReactiveRepository;

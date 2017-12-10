@@ -2,6 +2,8 @@ package guru.springframework.controllers;
 
 import guru.springframework.services.RecipeService;
 import lombok.extern.slf4j.Slf4j;
+
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class IndexController {
 
+	final static Logger log = Logger.getLogger(IndexController.class);
     private final RecipeService recipeService;
 
     public IndexController(RecipeService recipeService) {
